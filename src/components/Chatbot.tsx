@@ -48,7 +48,7 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAYe031aq8H1qBsdskK6zSnSOe-q3Dk0Eo', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAYe031aq8H1qBsdskK6zSnSOe-q3Dk0Eo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,6 +63,7 @@ const Chatbot = () => {
       });
 
       const data = await response.json();
+      console.log('Gemini API Response:', data);
       
       if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
         const botMessage: Message = {
