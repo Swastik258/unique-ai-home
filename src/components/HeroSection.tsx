@@ -13,8 +13,7 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent leading-tight">
-            Future of
-            <br />
+            Today's            <br />
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Artificial Intelligence
             </span>
